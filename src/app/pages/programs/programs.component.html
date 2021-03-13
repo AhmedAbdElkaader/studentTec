@@ -1,0 +1,82 @@
+<section class="headSection">
+    <div class="container">
+        <div class="row justify-content-md-center formSearchRow">
+            <div class="col-12 col-md-12 col-sm-12 col-lg-7">
+                <input type="text" class="form-control formInputLearn formSearch"
+                    placeholder="What do you want to learn">
+                <input type="text" class="form-control formInputCity formSearch" placeholder="Write or choose city">
+                <button class="btn btnSearch">Search</button>
+            </div>
+        </div>
+        <section>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 infoForFilter">
+                        <div class="group1">
+                            <p class="Title">City</p>
+                            <ng-select [(ngModel)]="selectedCity" placeholder="Choose one city or more"
+                                [multiple]="true">
+                                <ng-option *ngFor="let item of Cities" [value]="item">{{item}}</ng-option>
+                            </ng-select>
+                        </div>
+                        <div class="group2">
+                            <p class="Title">Program</p>
+                            <form [formGroup]="Form">
+                                <div *ngFor="let item of Program ">
+                                    <input type="radio" id="{{item}}" formControlName="radioButtons" value="{{item}}">
+                                    <label for="{{item}}">{{item}}</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="group3">
+                            <p class="Title">Field</p>
+                            <ng-select [(ngModel)]="SelctedFields" placeholder="Choose one field or more"
+                                [multiple]="true">
+                                <ng-option *ngFor="let item of Fields" [value]="item">{{item}}</ng-option>
+                            </ng-select>
+                        </div>
+                        <div class="group4">
+                            <p class="Title">School</p>
+                            <ng-select [(ngModel)]="SelctedSchool" placeholder="Choose one school or more"
+                                [multiple]="true">
+                                <ng-option *ngFor="let item of Schools" [value]="item">{{item}}</ng-option>
+                            </ng-select>
+                        </div>
+                        <div class="group5">
+                            <p class="Title">Language</p>
+                            <div *ngFor="let item of Languge">
+                                <input type="radio" id="item" name="item" checked value="item">
+                                <label for="item">{{item}}</label>
+                            </div>
+                        </div>
+                        <div class="group6">
+                            <p class="Title">Sort</p>
+                            <form [formGroup]="FormForSort">
+                                <div *ngFor="let item of sortArr">
+                                    <input type="radio" id="{{item}}" formControlName="radioButtonSortLowToHight"
+                                        value="{{item}}">
+                                    <label for="{{item}}">{{item}}</label>
+                                </div>
+                            </form>
+                        </div>
+                        <button (click)="showFilterResult()" class="btn btnFilter">Filter</button>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 resultOfFilter">
+                    <div class="containerOfresults" *ngFor="let item of Data">
+                        <div class="imageContent">
+                            <img src="../assets/Images/IESEG.png" class="img-fluid">
+                        </div>
+                        <div class="descrpContent">
+                            <p class="title">{{item.Name}}</p>
+                            <p class="supTitle">{{item.type}}</p>
+                            <span class="Tuition">Tuition Fee</span>
+                            <span class="Fees">{{item.fee}} $ {{item.length}}</span>
+                            <span class="cityType">{{item.city}}</span>
+                            <button class="btn">More info</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

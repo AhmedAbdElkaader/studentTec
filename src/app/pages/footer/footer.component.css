@@ -1,0 +1,34 @@
+section{
+    margin-top: 5%
+}
+
+.copyRight{
+    padding: 0;
+}
+.copyRight p{
+    color: #000000;
+    opacity: 0.4;
+    letter-spacing: 0.32px;
+    font-size: 13px;
+}
+.follow{
+    letter-spacing: 0.32px;
+    color: #000000;
+    opacity: 0.4;
+    font-size: 13px;
+}
+.follow span {
+    margin-right:10px
+}
+.follow img{
+    margin-right: 10px
+}
+.privcyAndTerm span{
+    letter-spacing: 0.32px;
+    color: #000000;
+    opacity: 0.4;
+    font-size: 13px
+}
+.Term{
+    margin-right:20px
+}

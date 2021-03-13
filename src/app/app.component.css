@@ -1,0 +1,61 @@
+
+.logo{
+    width: 80px;
+}
+
+.login{
+    background: #1C85C8 ;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px #1C85C833;
+    padding: 2px 10px;
+}
+.btnFilter{
+    background: #1C85C8 ;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px #1C85C833;
+    padding: 2px 20px;
+    margin-top:10%;
+    color: #FFFFFF
+}
+.login a {
+    color: white ;
+}
+.nav-link {
+    display: block;
+    padding: 0 0;
+}
+
+.formSearchRow{
+    margin-top: 10%
+}
+.formSearch{
+    display: initial;
+    width: 43.9%;
+    box-shadow: 0px 0px 25px #00000029;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 65px;
+
+}
+.formInputLearn{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid #1C85C8
+}
+.formInputCity{
+    border-radius: 0
+}
+.btnSearch{
+    background: #1C85C8;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+    vertical-align: initial;
+    height: 65px;
+
+}
+
+.active{
+    color: #1C85C8 !important
+}
+
